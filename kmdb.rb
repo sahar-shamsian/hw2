@@ -84,51 +84,51 @@ Role.destroy_all
 #Build out data in tables
 person1 = Person.new
 person1.name = "Chritopher Nolan"
-person.save
+person1.save
 
 person2 = Person.new
 person2.name = "Christian Bale"
-person.save
+person2.save
 
 person3 = Person.new
 person3.name = "Michael Caine"
-person.save
+person3.save
 
 person4 = Person.new
 person4.name = "Liam Neeson"
-person.save
+person4.save
 
 person5 = Person.new
 person5.name = "Katie Holmes"
-person.save
+person5.save
 
 person6 = Person.new
 person6.name = "Gary Oldman"
-person.save
+person6.save
 
 person7 = Person.new
 person7.name = "Heath Ledger"
-person.save
+person7.save
 
 person8 = Person.new
 person8.name = "Aaron Eckhart"
-person.save
+person8.save
 
 person9 = Person.new
 person9.name = "Maggie Gyllenhaal"
-person.save
+person9.save
 
 person10 = Person.new
 person10.name = "Tom Hardy"
-person.save
+person10.save
 
 person11 = Person.new
 person11.name = "Joseph Gordon-Levitt"
-person.save
+person11.save
 
 person12 = Person.new
 person12.name = "Anne Hathaway"
-person.save
+person12.save
 
 movie1 = Movie.new
 movie1.title = "Batman Begins"
@@ -159,10 +159,87 @@ role1.save
 
 role2 = Role.new
 role2.movie_id = "1"
-role2.person_id = "2"
-role2.character_name = "Bruce Wayne"
+role2.person_id = "3"
+role2.character_name = "Alfred"
 role2.save
 
+role3 = Role.new
+role3.movie_id = "1"
+role3.person_id = "4"
+role3.character_name = "Ra`s Al Ghul"
+role3.save
+
+role4= Role.new
+role4.movie_id = "1"
+role4.person_id = "5"
+role4.character_name = "Rachel Dawes"
+role4.save
+
+role5= Role.new
+role5.movie_id = "1"
+role5.person_id = "6"
+role5.character_name = "Commissioner Gordon"
+role5.save
+
+role6= Role.new
+role6.movie_id = "2"
+role6.person_id = "2"
+role6.character_name = "Bruce Wayne"
+role6.save
+
+role7= Role.new
+role7.movie_id = "2"
+role7.person_id = "7"
+role7.character_name = "Joker"
+role7.save
+
+role8= Role.new
+role8.movie_id = "2"
+role8.person_id = "8"
+role8.character_name = "Harvey Dent"
+role8.save
+
+role9= Role.new
+role9.movie_id = "2"
+role9.person_id = "3"
+role9.character_name = "Alfred"
+role9.save
+
+role10= Role.new
+role10.movie_id = "2"
+role10.person_id = "9"
+role10.character_name = "Rachel Dawes"
+role10.save
+
+role11= Role.new
+role11.movie_id = "3"
+role11.person_id = "2"
+role11.character_name = "Bruce Wayne"
+role11.save
+
+role12= Role.new
+role12.movie_id = "3"
+role12.person_id = "6"
+role12.character_name = "Commissioner Gordon"
+role12.save
+
+role13= Role.new
+role13.movie_id = "3"
+role13.person_id = "10"
+role13.character_name = "Bane"
+role13.save
+
+role14= Role.new
+role14.movie_id = "3"
+role14.person_id = "11"
+role14.character_name = "John Blake"
+role14.save
+
+role15= Role.new
+role15.movie_id = "3"
+role15.person_id = "12"
+role15.character_name = "Selina Kyle"
+role15.save
 
 
 #What is in the data base

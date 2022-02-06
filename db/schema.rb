@@ -22,15 +22,15 @@ ActiveRecord::Schema.define(version: 2022_02_06_222407) do
   end
 
   create_table "people", force: :cascade do |t|
-    t.string "movie_id"
-    t.string "person_id"
-    t.string "character_name"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "roles", force: :cascade do |t|
-    t.string "name"
+    t.string "movie_id"
+    t.string "person_id"
+    t.string "character_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
