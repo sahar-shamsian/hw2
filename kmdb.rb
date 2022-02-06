@@ -77,6 +77,100 @@
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
+Movie.destroy_all
+Person.destroy_all
+Role.destroy_all
+
+#Build out data in tables
+person1 = Person.new
+person1.name = "Chritopher Nolan"
+person.save
+
+person2 = Person.new
+person2.name = "Christian Bale"
+person.save
+
+person3 = Person.new
+person3.name = "Michael Caine"
+person.save
+
+person4 = Person.new
+person4.name = "Liam Neeson"
+person.save
+
+person5 = Person.new
+person5.name = "Katie Holmes"
+person.save
+
+person6 = Person.new
+person6.name = "Gary Oldman"
+person.save
+
+person7 = Person.new
+person7.name = "Heath Ledger"
+person.save
+
+person8 = Person.new
+person8.name = "Aaron Eckhart"
+person.save
+
+person9 = Person.new
+person9.name = "Maggie Gyllenhaal"
+person.save
+
+person10 = Person.new
+person10.name = "Tom Hardy"
+person.save
+
+person11 = Person.new
+person11.name = "Joseph Gordon-Levitt"
+person.save
+
+person12 = Person.new
+person12.name = "Anne Hathaway"
+person.save
+
+movie1 = Movie.new
+movie1.title = "Batman Begins"
+movie1.year_released = "2005"
+movie1.rated = "PG-13"
+movie1.person_id = "1"
+movie1.save
+
+movie2 = Movie.new
+movie2.title = "The Dark Knight"
+movie2.year_released = "2008"
+movie2.rated = "PG-13"
+movie2.person_id = "1"
+movie2.save
+
+movie3 = Movie.new
+movie3.title = "The Dark Knight"
+movie3.year_released = "2012"
+movie3.rated = "PG-13"
+movie3.person_id = "1"
+movie3.save
+
+role1 = Role.new
+role1.movie_id = "1"
+role1.person_id = "2"
+role1.character_name = "Bruce Wayne"
+role1.save
+
+role2 = Role.new
+role2.movie_id = "1"
+role2.person_id = "2"
+role2.character_name = "Bruce Wayne"
+role2.save
+
+
+
+#What is in the data base
+puts "There are #{Person.all.count} people"
+puts "There are #{Movie.all.count} movies"
+puts "There are #{Role.all.count} roles"
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -93,3 +187,6 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
+
+
+
