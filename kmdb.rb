@@ -134,112 +134,113 @@ movie1 = Movie.new
 movie1.title = "Batman Begins"
 movie1.year_released = "2005"
 movie1.rated = "PG-13"
-movie1.person_id = "1"
+movie1.person_id = person1.id
 movie1.save
 
 movie2 = Movie.new
 movie2.title = "The Dark Knight"
 movie2.year_released = "2008"
 movie2.rated = "PG-13"
-movie2.person_id = "1"
+movie2.person_id = person1.id
 movie2.save
 
 movie3 = Movie.new
 movie3.title = "The Dark Knight"
 movie3.year_released = "2012"
 movie3.rated = "PG-13"
-movie3.person_id = "1"
+movie3.person_id = person1.id
 movie3.save
 
 role1 = Role.new
-role1.movie_id = "1"
-role1.person_id = "2"
+role1.movie_id = movie1.id
+role1.person_id = person2.id
 role1.character_name = "Bruce Wayne"
 role1.save
-
+ 
 role2 = Role.new
-role2.movie_id = "1"
-role2.person_id = "3"
+role2.movie_id = movie1.id
+role2.person_id = person3.id
 role2.character_name = "Alfred"
 role2.save
-
+ 
 role3 = Role.new
-role3.movie_id = "1"
-role3.person_id = "4"
-role3.character_name = "Ra`s Al Ghul"
+role3.movie_id = movie1.id
+role3.person_id = person4.id
+role3.character_name = "Ra's Al Ghul"
 role3.save
-
-role4= Role.new
-role4.movie_id = "1"
-role4.person_id = "5"
+ 
+role4 = Role.new
+role4.movie_id = movie1.id
+role4.person_id = person5.id
 role4.character_name = "Rachel Dawes"
 role4.save
-
-role5= Role.new
-role5.movie_id = "1"
-role5.person_id = "6"
+ 
+role5 = Role.new
+role5.movie_id = movie1.id
+role5.person_id = person6.id
 role5.character_name = "Commissioner Gordon"
 role5.save
-
-role6= Role.new
-role6.movie_id = "2"
-role6.person_id = "2"
+ 
+role6 = Role.new
+role6.movie_id = movie2.id
+role6.person_id = person2.id
 role6.character_name = "Bruce Wayne"
 role6.save
-
-role7= Role.new
-role7.movie_id = "2"
-role7.person_id = "7"
+ 
+role7 = Role.new
+role7.movie_id = movie2.id
+role7.person_id = person7.id
 role7.character_name = "Joker"
 role7.save
-
-role8= Role.new
-role8.movie_id = "2"
-role8.person_id = "8"
+ 
+role8 = Role.new
+role8.movie_id = movie2.id
+role8.person_id = person8.id
 role8.character_name = "Harvey Dent"
 role8.save
-
-role9= Role.new
-role9.movie_id = "2"
-role9.person_id = "3"
+ 
+role9 = Role.new
+role9.movie_id = movie2.id
+role9.person_id = person3.id
 role9.character_name = "Alfred"
 role9.save
-
-role10= Role.new
-role10.movie_id = "2"
-role10.person_id = "9"
+ 
+role10 = Role.new
+role10.movie_id = movie2.id
+role10.person_id = person9.id
 role10.character_name = "Rachel Dawes"
 role10.save
-
-role11= Role.new
-role11.movie_id = "3"
-role11.person_id = "2"
+ 
+role11 = Role.new
+role11.movie_id = movie3.id
+role11.person_id = person2.id
 role11.character_name = "Bruce Wayne"
 role11.save
-
-role12= Role.new
-role12.movie_id = "3"
-role12.person_id = "6"
+ 
+role12 = Role.new
+role12.movie_id = movie3.id
+role12.person_id = person6.id
 role12.character_name = "Commissioner Gordon"
 role12.save
-
-role13= Role.new
-role13.movie_id = "3"
-role13.person_id = "10"
+ 
+role13 = Role.new
+role13.movie_id = movie3.id
+role13.person_id = person10.id
 role13.character_name = "Bane"
 role13.save
-
-role14= Role.new
-role14.movie_id = "3"
-role14.person_id = "11"
+ 
+role14 = Role.new
+role14.movie_id = movie3.id
+role14.person_id = person11.id
 role14.character_name = "John Blake"
 role14.save
-
-role15= Role.new
-role15.movie_id = "3"
-role15.person_id = "12"
+ 
+role15 = Role.new
+role15.movie_id = movie3.id
+role15.person_id = person12.id
 role15.character_name = "Selina Kyle"
 role15.save
+
 
 
 #What is in the data base
@@ -256,6 +257,16 @@ puts ""
 # Query the movies data and loop through the results to display the movies output
 # TODO!
 
+all_movies = Movie.all
+directors = Person.where({ id:person1})
+
+for movie in all_movies
+    for director in directors
+        puts "#{movie.title} #{movie.year_released} #{movie.rated} #{director.name}"
+    end
+end
+
+
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
@@ -264,6 +275,18 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
+
+cast_decisions = Role.all
+
+for cast in cast_decisions
+    puts "#{cast.movie.title} #{cast.person.name} #{cast.character_name}"
+end
+
+
+
+
+ 
+
 
 
 
